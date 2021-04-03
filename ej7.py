@@ -35,45 +35,45 @@ def diasMes(mes, año):
         dias = int(31)
         return dias
     elif año < 0:
-        print("Año invalido")
+        print("Año invalido.")
     else:
-        print("Datos Invalidos")
+        print("Datos Invalidos.")
 
 def validarFecha(dia,mes,año):
     if año < 0:
-        print("Año invalido")
+        print("Año invalido.")
     elif dia < 0 or dia >31:
-        print("Dia invalido")
+        print("Dia invalido.")
     elif dia > (diasMes(mes, año)):
-        print("Dia invalido")
+        print("Dia invalido.")
     elif mes < 0:
-        print("Mes invalido")
+        print("Mes invalido.")
     else:
-        print("Fecha Valida")
+        print("Fecha Valida.")
 
 opcion= input("""
 1. Comprobar si un año es bisiesto.
 2. Comprobar cuantos dias tiene un mes.
-3. Validar una fecha
+3. Validar una fecha.
 """)
 
 if opcion == "1":
     año= int(input("Ingrese el año "))
     bisiesto=comprobarBisiesto(año)
     if bisiesto == 1:
-        print("El año",año,"es bisiesto.")
+        print('El año, {año}, es bisiesto.')
     else:
-         print("El año",año,"no es bisiesto.")
+         print("El año {año} no es bisiesto.")
 
 if opcion == "2":
-    mes = (input("Ingrese el mes "))
-    año = (input("Ingrese el año "))
-    print("En el año",año,", el mes",mes,"tiene",diasMes(mes, año),"dias")
+    mes = (input("Ingrese el mes: "))
+    año = (input("Ingrese el año: "))
+    print("En el año {año} el mes {mes} tiene",diasMes(mes, año),"dias")
 
 if opcion == "3":
-    dia = int(input("Ingrese el dia "))
-    mes = int(input("Ingrese el mes "))
-    año = int(input("Ingrese el año "))
+    dia = int(input("Ingrese el dia: "))
+    mes = int(input("Ingrese el mes: "))
+    año = int(input("Ingrese el año: "))
     validarFecha(dia,mes,año)
 
 

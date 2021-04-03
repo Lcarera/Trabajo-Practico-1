@@ -4,10 +4,10 @@ def compararMayor(a,b):
     else:
         return b
 
-x1=int(input("ingrese el primer numero "))
-x2=int(input("ingrese el segundo numero "))
-x3=int(input("ingrese el tercer numero "))
-x4=int(input("ingrese el cuarto numero "))
+x1=int(input("ingrese el primer numero: "))
+x2=int(input("ingrese el segundo numero: "))
+x3=int(input("ingrese el tercer numero: "))
+x4=int(input("ingrese el cuarto numero: "))
 
 
 x12= x1 * x2   

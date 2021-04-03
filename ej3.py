@@ -7,11 +7,11 @@ def fact(n):
     return f
 
 
-factorial= int(input("Ingrese un numero entero y se va a devolver su factorial "))
+factorial= int(input("Ingrese un numero entero y se va a devolver su factorial: "))
 if factorial < 0:
-    print("El factorial de",factorial,"es",fact(factorial)*-1)
+    print("No se puede calcular el factorial de un numero negativo.")
 else:
-    print("El factorial de",factorial,"es",fact(factorial))
+    print("El factorial de {factorial} es", fact(factorial))
    
 
         
