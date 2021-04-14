@@ -1,13 +1,3 @@
-# 16. Escribir funciones que dada una cadena de caracteres:
-# 1. Devuelva solamente las letras consonantes. Por ejemplo, si recibe 'algoritmos' o
-# 'logaritmos' debe devolver 'lgrtms' .
-# 2. Devuelva solamente las letras vocales. Por ejemplo, si recibe 'sin consonantes' debe
-# devolver 'i ooae'.
-# 3. Reemplace cada vocal por su siguiente vocal. Por ejemplo, si recibe 'vestuario' debe
-# devolver 'vistaerou'.
-# 4. Indique si se trata de un palíndromo. Por ejemplo, 'anita lava la tina' es un palíndromo
-# (se lee igual de izquierda a derecha que de derecha a izquierda).
-
 def sacarVocales(cadena):
     for c in cadena:
         if c in "aeiouAEIOU":
@@ -26,7 +16,6 @@ def remplazarVocal(cadena):
 
     for c in cadena:
         if c in "aeiouAEIOU":
-            print(c)
             if c == "a" or c== "A":
                 i = 0
                 cadena = cadena.replace(c,vocales[i+1])  
@@ -42,13 +31,37 @@ def remplazarVocal(cadena):
             if c == "u" or c=="U":
                 i = -1
                 cadena = cadena.replace(c,vocales[i+1])      
-                      
-        
-            
-            
-           
     
-    return cadena
+    return cadena                  
+
+def detectarPalindromos(cadena1,cadena2):
+    if cadena2 == cadena1[::-1]:
+        return 1
+    else:
+        return 0
 
 
-print(remplazarVocal("baloo"))
+opcion=int(input("""Elija la funcion a realizar:
+1. Sacar vocales de una cadena.
+2. Sacar consonantes de una cadena.
+3. Remplazar las vocales de una cadena por su siguiente vocal 
+4. Revisar si dos cadena son capicua.
+"""))
+
+if opcion == 1:
+    cadena = input("Ingrese una cadena: \n")
+    print("Su cadena sin vocales queda",sacarVocales(cadena))
+elif opcion == 2:
+    cadena = input("Ingrese una cadena: \n")
+    print("Su cadena sin consonantes queda",sacarConsonantes(cadena))
+elif opcion == 3:
+    cadena = input("Ingrese una cadena: \n")
+    print("Su cadena con las vocales remplazadas queda",remplazarVocal(cadena))
+elif opcion == 4:
+    cadena1 = input("Ingrese una cadena: \n")
+    cadena2 = input("Ingrese otra cadena: \n")
+    if detectarPalindromos(cadena1,cadena2) == 1:
+        print("Las cadenas ingresadas son capicua.")
+    else:
+        print("Las cadenas ingresadas no son capicua")
+

@@ -10,29 +10,29 @@ def comprobarBisiesto(año):
 
 def validarMes(mes):
     mescomp= 0
-    if mes == "4" or mes == "abril":
+    if mes == "4" or mes == "abril" or mes == 4:
         mescomp = 4
-    elif mes == "6" or mes == "junio":
+    elif mes == "6" or mes == "junio" or mes == 6:
         mescomp = 6
-    elif mes == "9" or mes == "septiembre":
+    elif mes == "9" or mes == "septiembre" or mes == 9:
         mescomp = 9
-    elif mes == "11" or mes == "noviembre" :
+    elif mes == "11" or mes == "noviembre" or mes == 11 :
         mescomp = 11
-    elif mes == "1" or mes == "enero":
+    elif mes == "1" or mes == "enero" or mes == 1:
         mescomp = 1
-    elif mes == "3" or mes == "marzo":
+    elif mes == "3" or mes == "marzo" or mes == 3:
         mescomp = 3
-    elif mes == "5" or mes == "mayo":
+    elif mes == "5" or mes == "mayo" or mes == 5:
         mescomp = 5
-    elif mes == "7" or mes == "julio" :
+    elif mes == "7" or mes == "julio" or mes == 7:
         mescomp = 7
-    elif mes == "8" or mes == "agosto":
+    elif mes == "8" or mes == "agosto" or mes == 8:
         mescomp = 8
-    elif mes == "10" or mes == "octubre":
+    elif mes == "10" or mes == "octubre"or mes == 10:
         mescomp = 10
-    elif mes == "12" or mes == "diciembre" :
+    elif mes == "12" or mes == "diciembre" or mes == 12:
         mescomp = 12
-    elif mes== "2" or mes == "febrero" :
+    elif mes== "2" or mes == "febrero" or mes == 2:
         mescomp = 2
     return mescomp
 
@@ -43,7 +43,6 @@ def diasMes(mes, año):
         diasMeses = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     else:
         diasMeses = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
     return diasMeses[mescomp]  
 
 
@@ -119,7 +118,7 @@ def diferenciaFechas(dia1,mes1,año1,dia2,mes2,año2):
             mes -=1
             dia = diasMes(mes, año) + dia
         
-        diferencia = año,"años,",mes,"meses y",dia,"dias"
+        diferencia = f"{año} Años, {mes} meses y {dia} dias"
         return diferencia
     
     elif año1 > año2:
@@ -134,8 +133,8 @@ def diferenciaFechas(dia1,mes1,año1,dia2,mes2,año2):
             mes -=1
             dia = diasMes(mes, año) + dia
         
-        diferencia = str(año),"años,",str(mes),"meses",str(dia),"dias"
-        return str(diferencia)
+        diferencia = f"{año} Años, {mes} meses y {dia} dias"
+        return diferencia
    
     elif año1 == año2:
         año = año1
@@ -146,7 +145,7 @@ def diferenciaFechas(dia1,mes1,año1,dia2,mes2,año2):
                 mes -=1
                 dia = diasMes(mescomp1 - mescomp2, año) + dia     
                
-            diferencia = mes,"meses y",dia,"dias"
+            diferencia = f"{mes} Meses y {dia} dias"
             return diferencia
         
         elif mescomp2 > mescomp1:
@@ -158,19 +157,19 @@ def diferenciaFechas(dia1,mes1,año1,dia2,mes2,año2):
                 mes -=1
                 dia = diasMes(mescomp2 - mescomp1, año) + dia     
                 
-            diferencia = mes,"meses y",dia,"dias"
+            diferencia = f"{mes} Meses y {dia} dias"
             return diferencia
        
         elif mescomp1 == mescomp2:
             
             if dia1 > dia2:
                 dia = dia1 - dia2
-                diferencia = dia,"dias" 
+                diferencia = f"{dia} Dias" 
                 return diferencia
             
             elif dia2 > dia1:
                 dia = dia1 - dia2
-                diferencia = dia,"dias" 
+                diferencia = f"{dia} Dias" 
                 return diferencia
             
             elif dia1 == dia2:
