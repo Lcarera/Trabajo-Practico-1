@@ -1,3 +1,5 @@
+"""Se agrega el metodo "sleep()" para suspender el programa por unos segundos 
+despues de un intento fallido, este tiempo va creciendo despues de cada intento fallido."""
 import time
 from time import sleep
 CONTRASEÑA= "master$123"

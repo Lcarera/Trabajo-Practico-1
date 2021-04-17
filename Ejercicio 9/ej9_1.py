@@ -1,3 +1,4 @@
+"""Se agrega un limite de intentos para ingresar la contraseña."""
 CONTRASEÑA= "master$123"
 n = 0
 while n < 3:

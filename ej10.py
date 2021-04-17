@@ -1,7 +1,9 @@
+"""Genera un numero aleatorio y el usuario debe ingresar numeros hasta adivinarlo,
+el programa devuelve pistas de si el numero es mayor o menos y permite rendirse cada 5 intentos."""
 import random   
 from random import randrange
-for i in range(1):
-    x=(random.randrange(50))
+
+x=(random.randrange(50))
 
 num = 0
 intentos=0
@@ -24,7 +26,7 @@ while not num == x:
             print ("El numero es mas grande.")
             
         elif num == x:
-            print("Le pegaste en", intentos + 1,"intentos")
+            print(f"Le pegaste en {intentos + 1} intentos")
             intentos = 0
             break
     elif num.isdigit() == False:

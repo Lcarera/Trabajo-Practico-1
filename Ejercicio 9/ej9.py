@@ -1,3 +1,4 @@
+"""Pide que se ingrese una contraseña hasta que sea igual a una ya predefinida"""
 CONTRASEÑA= "master$123"
 contra = ""
 while not contra == CONTRASEÑA:

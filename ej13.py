@@ -1,4 +1,6 @@
+"""Compara dos palabras para ver si son iguales pero la segunda en mayusculas"""
 def compararPalabra(palabra, palabraupper):
+    """Compara las palabras"""
     if palabraupper==palabra.upper():
         return True
     else:

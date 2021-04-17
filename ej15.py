@@ -36,7 +36,7 @@ opcion=int(input("""
 """))
 
 if opcion == 1:
-    print("Las siglas de", cadena, "son", mostrarSiglas(cadena))
+    print(f"Las siglas de {cadena} son {mostrarSiglas(cadena)}")
 elif opcion == 2:
     print(ponerMayus(cadena))
 elif opcion == 3:

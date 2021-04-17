@@ -1,19 +1,24 @@
+"""Da 3 opciones para modificar una cadena, sacarle las vocales,
+sacarle las consonantes o remplazar las vocales"""
 def sacarVocales(cadena):
+    """Recorre la cadena ingresada y saca las vocales"""
     for c in cadena:
         if c in "aeiouAEIOU":
             cadena = cadena.replace(c,"")
     return cadena
 
 def sacarConsonantes(cadena):
+    """Recorre la cadena ingresada y saca las consonantes"""
     for c in cadena:
         if not c in "aeiouAEIOU":
             cadena = cadena.replace(c,"")
     return cadena
 
-vocales=["a","e","i","o","u"]
 
 def remplazarVocal(cadena):
-
+    vocales=["a","e","i","o","u"]
+    """Recorre la cadena ingresada y remplaza las vocales por su siguiente vocal
+    Ej.: a se remplaza por e"""
     for c in cadena:
         if c in "aeiouAEIOU":
             if c == "a" or c== "A":
@@ -34,13 +39,14 @@ def remplazarVocal(cadena):
     
     return cadena                  
 
-def detectarPalindromos(cadena1,cadena2):
-    if cadena2 == cadena1[::-1]:
+def detectarPalindromos(cadena):
+    """Compara una cadena, con la misma cadena pero dada vuelta para comprobar sies un palindromo."""
+    if cadena == cadena[::-1]:
         return 1
     else:
         return 0
 
-
+cadena = input("Ingrese una cadena: \n")
 opcion=int(input("""Elija la funcion a realizar:
 1. Sacar vocales de una cadena.
 2. Sacar consonantes de una cadena.
@@ -49,19 +55,14 @@ opcion=int(input("""Elija la funcion a realizar:
 """))
 
 if opcion == 1:
-    cadena = input("Ingrese una cadena: \n")
     print("Su cadena sin vocales queda",sacarVocales(cadena))
 elif opcion == 2:
-    cadena = input("Ingrese una cadena: \n")
     print("Su cadena sin consonantes queda",sacarConsonantes(cadena))
 elif opcion == 3:
-    cadena = input("Ingrese una cadena: \n")
     print("Su cadena con las vocales remplazadas queda",remplazarVocal(cadena))
 elif opcion == 4:
-    cadena1 = input("Ingrese una cadena: \n")
-    cadena2 = input("Ingrese otra cadena: \n")
-    if detectarPalindromos(cadena1,cadena2) == 1:
-        print("Las cadenas ingresadas son capicua.")
+    if detectarPalindromos(cadena) == 1:
+        print("La cadena ingresada es capicua.")
     else:
-        print("Las cadenas ingresadas no son capicua")
+        print("La cadena ingresada no es capicua.")
 

@@ -1,11 +1,13 @@
-
+"""El programa da 3 opciones.
+Dependiendo de la opcion elegida pide la temperatura y la devuelva convertida,
+o devuelve una tabla de conversion."""
 def conversorC(f):
-    #Convierte grados Celsius a Fahrenheit.
+    """Convierte grados Celsius a Fahrenheit."""
     Celsius= (f-32)*5/9
     return "{0:.2f}".format(Celsius)
 
 def conversorF(c):
-    #Convierte grados Fahrenheit a Celsius.
+    """Convierte grados Fahrenheit a Celsius."""
     Fahrenheit= (9/5) * c + 32
     return "{0:.2f}".format(Fahrenheit)
 
@@ -14,8 +16,8 @@ def conversorF(c):
 def tablaConversion():   
     f = 0
     while f <= 120:
-        #Imprime una tabla de conversion entre grados Fahrenheit y Celsius.
-        print(str(f)+"°F son "+str(conversorC(f))+"°C.")
+        """Imprime una tabla de conversion entre grados Fahrenheit y Celsius."""
+        print(f"{f} °F son {conversorC(f)} °C.")
         f = f + 10 
 
 conversion=(input(""" 
@@ -25,10 +27,10 @@ conversion=(input("""
 """))
 if conversion == "1" :
     temp=float(input("Ingrese la temperatura a convertir: "))
-    print(str(temp)+"°F son ",(str(conversorC(temp)))+"°C.")
+    print(f"{temp}°F son {conversorC(temp)}°C.")
 elif conversion == "2" :
     temp=float(input("Ingrese la temperatura a convertir: "))
-    print(str(temp)+"°C son "+str(conversorF(temp))+"°F.")
+    print(f"{temp}°C son {conversorF(temp)}°F.")
 elif conversion == "3" :
     tablaConversion()
 else:

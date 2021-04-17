@@ -1,35 +1,38 @@
+"""El programa da a elegir entre 7 opciones, que son distintas funciones matematicas,
+despues de elegir la opcion pide los datos necesarios para realizar la funcion elegida.
+"""
 def calcularPerimetroR(base, altura):
-    #Calcula el perimetro de un rectangulo.
+    """Calcula el perimetro de un rectangulo."""
     per=(base)*2+(altura)*2
     return "{0:.2f}".format(per)
 
 def calcularAreaR(base,altura):
-    #Calcula el area de un rectangulo.
+    """Calcula el area de un rectangulo."""
     area= base*altura
     return "{0:.2f}".format(area)
 
 def calcularArea2(x1,x2,y1,y2):
-    #Calcula el area de un rectangulo segun sus coordenadas en un grafico.
+    """Calcula el area de un rectangulo segun sus coordenadas en un grafico."""
     area2=(x2-x1)*(y2-y1)
     return "{0:.2f}".format(area2)
 
 def calcularPerimetroC(radio):
     perimetro = radio * 2 * 3.14
-    #Calcula el perimetro de un circulo.
+    """Calcula el perimetro de un circulo."""
     return "{0:.2f}".format(perimetro)
 
 def calcularAreaC(radio):
-    #Calcula el area de un circulo.
+    """Calcula el area de un circulo."""
     area= radio**2 * 3.14
     return "{0:.2f}".format(area) 
 
 def calcularVolumen(radio):
-   #Calcula el volumen de una esfera.
+   """Calcula el volumen de una esfera."""
     V = 4/3 * 3.14 * radio**3
     return "{0:.2f}".format(V)
 
 def calcularHipotenusa(cateto1,cateto2):
-    #Calcula la hipotenusa de un triangulo rectangulo, segun el teorema de pitagoras.
+    """Calcula la hipotenusa de un triangulo rectangulo, segun el teorema de pitagoras."""
     h =(cateto1**2 + cateto2**2)**0.5
     return "{0:.2f}".format(h)
 

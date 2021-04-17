@@ -1,4 +1,5 @@
 def comprobarBisiesto(año):
+    """Comprueba si un año es bisiesto"""
     if año % 4 != 0:
         return 0
     elif año % 4 == 0 and año % 100 != 0: 
@@ -9,6 +10,7 @@ def comprobarBisiesto(año):
 	    return 1
 
 def validarMes(mes):
+    """Permite que se ingrese el mes por su nombre o por su numero"""
     mescomp= 0
     if mes == "4" or mes == "abril" or mes == 4:
         mescomp = 4
@@ -37,7 +39,7 @@ def validarMes(mes):
     return mescomp
 
 def diasMes(mes, año):
-    
+    """Calcula cuantos dias tiene el mes ingresado"""
     mescomp=validarMes(mes)
     if comprobarBisiesto(año) == False:
         diasMeses = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -47,6 +49,7 @@ def diasMes(mes, año):
 
 
 def validarFecha(dia,mes,año):
+    """Valida una fecha"""
     mescomp=validarMes(mes)
     if año < 0:
         print("Año invalido.")
@@ -60,11 +63,13 @@ def validarFecha(dia,mes,año):
         return 1
 
 def diasRestantesMes(dia,mes,año):
+    """Calcula cuantos dias faltan para que termine el mes"""
     mescomp=validarMes(mes)
     resta=diasMes(mescomp,año)-dia
     return resta
 
 def diasRestantesAño(dia,mes,año):
+    """Calcula cuantos dias faltan para que termine el año"""
     mescomp=validarMes(mes)
     i = mescomp
     dias= diasMes(mescomp, año) - dia
@@ -83,6 +88,7 @@ def diasRestantesAño(dia,mes,año):
         return total
 
 def diasTranscurridos(dia,mes,año):
+    """Calcula cuantos dias pasaron en el año hasta la fecha ingresada"""
     mescomp=validarMes(mes)
     i = mescomp
     dias= diasMes(mescomp, año) - diasRestantesMes(dia,mescomp,año)
@@ -101,6 +107,7 @@ def diasTranscurridos(dia,mes,año):
         return total
 
 def diferenciaFechas(dia1,mes1,año1,dia2,mes2,año2):
+    """Calcula la diferencia entre dos fechas en años, mese y dias"""
     mescomp1=validarMes(mes1)
     mescomp2=validarMes(mes2)
     validarFecha(dia1,mescomp1,año1)
@@ -174,21 +181,7 @@ def diferenciaFechas(dia1,mes1,año1,dia2,mes2,año2):
             
             elif dia1 == dia2:
                 diferencia="las fechas son iguales"
-                return diferencia
-
-
-       
-       
-        
-
-        
-
-
-    
-
-    
-
-
+                return diferenc
 
 opcion=input("""Elija su Funcion:
 1. Comprobar si un año es bisiesto.
@@ -204,16 +197,16 @@ if opcion == "1":
     año= int(input("Ingrese el año "))
     bisiesto=comprobarBisiesto(año)
     if bisiesto == 1:
-        print("El año",{año}," es bisiesto.")
+        print(f"El año {año} es bisiesto.")
     else:
-         print("El año", {año}," no es bisiesto.")
+         print(f"El año {año} no es bisiesto.")
 
 if opcion == "2":
     mes = input("Ingrese el mes: ".lower())
     año = int(input("Ingrese el año: "))
     if año < 0:
         print("año invalido.")
-    print("En el año" ,año, "el mes" ,mes, "tiene",diasMes(mes, año),"dias")
+    print(f"En el año {año} el mes {mes} tiene {diasMes(mes, año)} dias")
 
 if opcion == "3":
     dia = int(input("Ingrese el dia: "))
@@ -228,20 +221,20 @@ if opcion == "4":
     mes = input("Ingrese el mes: ".lower())
     año = int(input("Ingrese el año: "))
     diasRestantesMes(dia,mes,año)
-    print("Faltan",diasRestantesMes(dia,mes,año),"dias para que termine el mes.")
+    print(f"Faltan {diasRestantesMes(dia,mes,año)} dias para que termine el mes.")
     
 if opcion == "5":
     dia = int(input("Ingrese el dia: "))
     mes = input("Ingrese el mes: ".lower())
     año = int(input("Ingrese el año: "))
     diasRestantesAño(dia,mes,año)
-    print("Faltan",diasRestantesAño(dia,mes,año),"dias para que termine el año.")
+    print(f"Faltan {diasRestantesAño(dia,mes,año)} dias para que termine el año.")
 
 if opcion == "6":
     dia = int(input("Ingrese el dia: "))
     mes = input("Ingrese el mes: ".lower())
     año = int(input("Ingrese el año: "))
-    print("Pasaron",diasTranscurridos(dia,mes,año),"hasta la fecha.")
+    print(f"Pasaron {diasTranscurridos(dia,mes,año)} hasta la fecha.")
 
 if opcion == "7":
     dia1 = int(input("Ingrese el primer dia: "))
@@ -250,7 +243,7 @@ if opcion == "7":
     dia2 = int(input("Ingrese el segundo dia: "))
     mes2 = input("Ingrese el segundo mes: ".lower())
     año2 = int(input("Ingrese el segundo año: "))
-    print("Pasaron",diferenciaFechas(dia1,mes1,año1,dia2,mes2,año2),"entre las fechas.")
+    print(f"Pasaron {diferenciaFechas(dia1,mes1,año1,dia2,mes2,año2)} entre las fechas.")
 
 
 

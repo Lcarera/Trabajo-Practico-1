@@ -1,4 +1,6 @@
+"""Devuelve cuantas vocales tiene una cadena, ingresada por el usuario."""
 def contarVocales(cadena):
+    """Cuenta las vocales de una cadena."""
     vocal = 0
     for c in cadena:
         if c in "aeiouAEIOU":
@@ -6,4 +8,4 @@ def contarVocales(cadena):
     return vocal
 
 cadena= input("Ingrese una cadena y se devolvera cuantas vocales tiene: ")
-print(cadena,"tiene",contarVocales(cadena),"vocales.")
+print(f"{cadena} tiene {contarVocales(cadena)} vocales.")

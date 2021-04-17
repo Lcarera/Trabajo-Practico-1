@@ -1,4 +1,8 @@
+"""Pide un telegrama, el maximo de letras que puede tener cada palabra y los costos de las palabras largas y cortas.
+Reemplaza las letras que excedan el maximo ingresado por un "@" y calcula el costo del telegrama""" 
+
 def cortarPalabras(cadena,longMax,costoCorto,costoLargo):
+    """Separa la cadena por palabras, remplaza las palabras que excedan el limite y calcula el costo"""
     palabras = cadena.split(" ")
     palabras[-1]=palabras[-1].rstrip(".")
     longPalabras = 0

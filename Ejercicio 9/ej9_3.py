@@ -1,3 +1,5 @@
+"""Se agrega una funcion que compara la contraseña ingresada y la predefinida
+y devuelve True en caso de que coincidan."""
 import time
 from time import sleep
 CONTRASEÑA= "master$123"

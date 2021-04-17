@@ -1,22 +1,17 @@
-# 11. Escribir una función que dada la cantidad de ejercicios de un examen, y el porcentaje
-# necesario de ejercicios bien resueltos necesario para aprobar dicho examen, revise un grupo
-# de exámenes. Para ello, en cada paso debe preguntar la cantidad de ejercicios resueltos por
-# el alumno, indicando con un valor centinela que no hay más exámenes a revisar. Debe
-# mostrar por pantalla el porcentaje correspondiente a la cantidad de ejercicios resueltos
-# respecto a la cantidad de ejercicios del examen y una leyenda que indique si aprobó o no.
-#  cuantos ej habia
-#  cuantos se necesitan
-#  valor centinela 
-#  cauntos hizo bien el alumno % de bien y si aprobo o no
-
+"""Pide cuantos ejercicios tiene un examen y que porcentaje debe ser correcto para estar aprobado,
+despues permite ingresar cuantos ejercicicos correctos tiene un examen y devuelve si esta aprobado o no."""
 def aprobarExamen(ejercicios,porcentaje):
+    """Calcula la nota minima"""
     notaMinima=(porcentaje*ejercicios)/100
     return notaMinima
 
 def calcularNota(nota,ejercicios):
+    """Calcula el porcentaje de ejercicios correctos"""
     notaPorcentaje=(nota*100)/ejercicios
     return notaPorcentaje
+
 ejercicios = 0
+
 while ejercicios == 0 or ejercicios < -1:
     ejercicios=int(input("Cuantos ejercicios  tiene el examen? "))
     if ejercicios < 0:
@@ -25,6 +20,7 @@ while ejercicios == 0 or ejercicios < -1:
 porcentaje=int(input("Que porcentaje se necesita para aprobar? "))
 if porcentaje > 100:
     print("Datos no validos.")
+
 if porcentaje < 0:
     print("Datos no validos.")
 

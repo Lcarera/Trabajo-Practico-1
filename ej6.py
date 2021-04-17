@@ -1,4 +1,6 @@
+"""Pide 6 numeros, hace todas las multiplicaciones posibles y devuelve el mayor producto"""
 def compararMayor(a,b):
+    """Compara dos numeros y devuelve el mayor"""
     if a > b:
         return a
     else:
