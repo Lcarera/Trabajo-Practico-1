@@ -32,8 +32,15 @@ __6.__ Escribir una función que, dados cuatro números, devuelva el mayor produ
 <hr>
 
 __7.__ Escribir funciones que resuelvan los siguientes problemas:
-   1. Dado un año indicar si es bisiesto. (__Nota__: un año es bisiesto si es un número divisible por 4, pero no si es divisible por 100, excepto que también sea divisible por 400).
+   1. Dado un año indicar si es bisiesto. (__Nota__: un año es bisiesto si es un número divisible por 4,      pero no si es divisible por 100, excepto que también sea divisible por 400).
    2. Dado un mes, devolver la cantidad de días correspondientes.
+   3. Dada una fecha (día, mes, año), indicar si es válida o no.
+   4. Dada una fecha, indicar los días que faltan hasta fin de mes.
+   5. Dada una fecha, indicar los días que faltan hasta fin de año.
+   6. Dada una fecha, indicar la cantidad de días transcurridos en ese año hasta esa fecha.
+   7. Dadas dos fechas (día1, mes1, año1, día2, mes2, año2), indicar el tiempo transcurrido
+      entre ambas, en años, meses y días.
+      Nota: en todos los casos, invocar las funciones escritas previamente cuando sea posible.
 <hr>
 
 __8.__ Escribir un programa que reciba como entrada un entero representando un año (por ejemplo 751, 1999, o 2158), y muestre por pantalla el mismo año escrito en números romanos.
@@ -41,8 +48,8 @@ __8.__ Escribir un programa que reciba como entrada un entero representando un a
 
 __9.__ Escribir un programa que contenga una contraseña inventada, que le pregunte al usuario la contraseña, y no le permita continuar hasta que la haya ingresado correctamente.
    1. Modificar el programa anterior para que solamente permita una cantidad fija de intentos.
-   2. Modificar el programa anterior para que después de cada intento agregue una pausa cada vez mayor, utilizando la función sleep del módulo time.
-   3. Modificar el programa anterior para que sea una función que devuelva si el usuario ingresó o no la contraseña correctamente, mediante un valor booleano (True o False).
+   2. Modificar el programa anterior para que después de cada intento agregue una pausa cada vez mayor,       utilizando la función sleep del módulo time.
+   3. Modificar el programa anterior para que sea una función que devuelva si el usuario ingresó o no la      contraseña correctamente, mediante un valor booleano (True o False).
 <hr>
 
 __10.__ Utilizando la función randrange del módulo random, escribir un programa que tenga un número aleatorio secreto, y luego permita al usuario ingresar números y le indique si son menores o mayores que el número a adivinar, hasta que el usuario ingrese el número correcto.
@@ -69,25 +76,25 @@ El programa, entonces, debe generar un número que el jugador no pueda predecir.
 
 __15.__ Escribir una función que dada una cadena de caracteres, devuelva:
    1. La primera letra de cada palabra. Por ejemplo, si recibe 'Universal Serial Bus' debe devolver 'USB'.
-   2. Dicha cadena con la primera letra de cada palabra en mayúsculas. Por ejemplo, si recibe 'república argentina' debe devolver 'República Argentina'.
+   2. Dicha cadena con la primera letra de cada palabra en mayúsculas. Por ejemplo, si recibe 'república      argentina' debe devolver 'República Argentina'.
 <hr>
 
 __16.__ Escribir funciones que dada una cadena de caracteres:
-   1. Devuelva solamente las letras consonantes. Por ejemplo, si recibe 'algoritmos' o 'logaritmos' debe devolver 'lgrtms' .
-   2. Devuelva solamente las letras vocales. Por ejemplo, si recibe 'sin consonantes' debe devolver 'i ooae'.
-   3. Reemplace cada vocal por su siguiente vocal. Por ejemplo, si recibe 'vestuario' debe devolver 'vistaerou'.
-   4. Indique si se trata de un palíndromo. Por ejemplo, 'anita lava la tina' es un palíndromo (se lee igual de izquierda a derecha que de derecha a izquierda).
+   1. Devuelva solamente las letras consonantes. Por ejemplo, si recibe 'algoritmos' o 'logaritmos' debe      devolver 'lgrtms' .
+   2. Devuelva solamente las letras vocales. Por ejemplo, si recibe 'sin consonantes' debe devolver 'i        ooae'.
+   3. Reemplace cada vocal por su siguiente vocal. Por ejemplo, si recibe 'vestuario' debe devolver           'vistaerou'.
+   4. Indique si se trata de un palíndromo. Por ejemplo, 'anita lava la tina' es un palíndromo (se lee        igual de izquierda a derecha que de derecha a izquierda).
 <hr>
 
 __17.__ ___Procesamiento de telegramas:___ Un oficial de correos decide optimizar el trabajo de su oficina cortando todas las palabras de más de cinco letras a sólo cinco letras (e indicando que una palabra fue cortada con el agregado de una arroba). Además elimina todos los espacios en blanco de más. Por ejemplo, al texto " Llego mañana alrededor del mediodía " se transcribe como "Llego mañan@ alred@ del medio@". Por otro lado cobra un valor para las palabras cortas y otro valor para las palabras largas (que deben ser cortadas).
-   1. Escribir una función que reciba un texto, la longitud máxima de las palabras, el costo de cada palabra corta, el costo de cada palabra larga, y devuelva como resultado el texto del telegrama y el costo del mismo.
-   2. Los puntos se reemplazan por la palabra especial ”STOP”, y el punto final (que puede faltar en el texto original) se indica como ”STOPSTOP”. Al texto: " Llego mañana alrededor del mediodía. Voy a almorzar " Se lo transcribe como: "Llego mañan@ alred@ del medio@ STOP Voy a almor@ STOPSTOP".
+   1. Escribir una función que reciba un texto, la longitud máxima de las palabras, el costo de cada          palabra corta, el costo de cada palabra larga, y devuelva como resultado el texto del telegrama y el    costo del mismo.
+   2. Los puntos se reemplazan por la palabra especial ”STOP”, y el punto final (que puede faltar en el       texto original) se indica como ”STOPSTOP”. Al texto: " Llego mañana alrededor del mediodía. Voy a       almorzar " Se lo transcribe como: "Llego mañan@ alred@ del medio@ STOP Voy a almor@ STOPSTOP".
 <hr>
 
 __18.__ Inversión de listas:
-    1. Realizar una función que, dada una lista, devuelva una nueva lista cuyo contenido sea
-    igual a la original pero invertida. Así, dada la lista ['Di', 'buen', 'día', 'a', 'papa'], deberá
-    devolver ['papa', 'a', 'día', 'buen', 'Di'].
-    2. Realizar otra función que invierta la lista, pero en lugar de devolver una nueva,
-    modifique la lista dada para invertirla, sin usar listas auxiliares.
+   1. Realizar una función que, dada una lista, devuelva una nueva lista cuyo contenido sea
+      igual a la original pero invertida. Así, dada la lista ['Di', 'buen', 'día', 'a', 'papa'], deberá
+      devolver ['papa', 'a', 'día', 'buen', 'Di'].
+   2. Realizar otra función que invierta la lista, pero en lugar de devolver una nueva,
+      modifique la lista dada para invertirla, sin usar listas auxiliares.
 <hr>
