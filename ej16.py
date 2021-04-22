@@ -23,19 +23,35 @@ def remplazarVocal(cadena):
         if c in "aeiouAEIOU":
             if c == "a" or c== "A":
                 i = 0
-                cadena = cadena.replace(c,vocales[i+1])  
+                if c == "a":
+                    cadena = cadena.replace(c,vocales[i+1])  
+                elif c == "A":
+                    cadena = cadena.replace(c,vocales[i+1].upper())
+
             if c == "e" or c== "E":
                 i = 1
-                cadena = cadena.replace(c,vocales[i+1])  
+                if c == "e":
+                    cadena = cadena.replace(c,vocales[i+1])  
+                elif c == "E":
+                    cadena = cadena.replace(c,vocales[i+1].upper())
             if c == "i" or c== "I":
                 i = 2
-                cadena = cadena.replace(c,vocales[i+1])  
+                if c == "i":
+                    cadena = cadena.replace(c,vocales[i+1])  
+                elif c == "I":
+                    cadena = cadena.replace(c,vocales[i+1].upper())
             if c == "o" or c== "O":
                 i = 3
-                cadena = cadena.replace(c,vocales[i+1])  
+                if c == "o":
+                    cadena = cadena.replace(c,vocales[i+1])  
+                elif c == "O":
+                    cadena = cadena.replace(c,vocales[i+1].upper())  
             if c == "u" or c=="U":
                 i = -1
-                cadena = cadena.replace(c,vocales[i+1])      
+                if c == "u":
+                    cadena = cadena.replace(c,vocales[i+1])  
+                elif c == "U":
+                    cadena = cadena.replace(c,vocales[i+1].upper())   
     
     return cadena                  
 
