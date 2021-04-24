@@ -181,7 +181,7 @@ def diferenciaFechas(dia1,mes1,año1,dia2,mes2,año2):
             
             elif dia1 == dia2:
                 diferencia="las fechas son iguales"
-                return diferenc
+                return diferencia
 
 opcion=input("""Elija su Funcion:
 1. Comprobar si un año es bisiesto.
