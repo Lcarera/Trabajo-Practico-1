@@ -12,12 +12,17 @@ def cortarPalabras(cadena,longMax,costoCorto,costoLargo):
         if len(palabras[i])>longMax:
             frase += palabras[i][0:longMax]+"@" +" "
             longPalabras = longPalabras + 1
+            for letra in palabras[i]:
+              if letra == ".":
+                  print(palabras[i][-1])
+                  frase = f"{frase.strip()}{palabras[i].replace(palabras[i], 'STOP ')}" 
         else:
             frase +=palabras[i]+" "
             shortPalabras = shortPalabras + 1
-        for letra in palabras[i]:
-            if letra== ".":
-                frase = f"{frase.strip()}{palabras[i].replace(palabras[i], 'STOP ')}" 
+            for letra in palabras[i]:
+              if letra == ".":
+                  print(palabras[i][-1])
+                  frase = f"{palabras[i].replace(palabras[i][-1], 'STOP ')}" 
     
    
     frase = frase.strip() + "STOPSTOP"
