@@ -10,12 +10,12 @@ def validarNumero(numero):
 
         if(len(numero) == 4):
 
-            return(numero[0:1] != numero[1:2]
-            and numero[0:1] != numero[2:3]
-            and numero[0:1] != numero[3:4]
-            and numero[1:2] != numero[2:3]
-            and numero[1:2] != numero[3:4]
-            and numero[2:3] != numero[3:4])
+            return(numero[0] != numero[1]
+            and numero[0] != numero[2]
+            and numero[0] != numero[3]
+            and numero[1] != numero[2]
+            and numero[1] != numero[3]
+            and numero[2] != numero[3])
         else:
             return False
     else:
@@ -61,7 +61,7 @@ def Comenzar():
 
         num= str(numero)
         cod= str(nuevoCodigo)
-        print(cod)
+
         for i in range(1,5):
 
             if(num[i-1:i] == cod[i-1:i]):
