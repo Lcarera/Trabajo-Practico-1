@@ -16,44 +16,24 @@ def sacarConsonantes(cadena):
 
 
 def remplazarVocal(cadena):
-    vocales=["a","e","i","o","u"]
+    #vocales=["a","e","i","o","u"]
+    cadenaCambiada = ""
+    vocales = {
+        "a":"e",
+        "e":"i",
+        "i":"o",
+        "o":"u",
+        "u":"a"
+    }
     """Recorre la cadena ingresada y remplaza las vocales por su siguiente vocal
     Ej.: a se remplaza por e"""
-    for c in cadena:
-        if c in "aeiouAEIOU":
-            if c == "a" or c== "A":
-                i = 0
-                if c == "a":
-                    cadena = cadena.replace(c,vocales[i+1])  
-                elif c == "A":
-                    cadena = cadena.replace(c,vocales[i+1].upper())
-
-            if c == "e" or c== "E":
-                i = 1
-                if c == "e":
-                    cadena = cadena.replace(c,vocales[i+1])  
-                elif c == "E":
-                    cadena = cadena.replace(c,vocales[i+1].upper())
-            if c == "i" or c== "I":
-                i = 2
-                if c == "i":
-                    cadena = cadena.replace(c,vocales[i+1])  
-                elif c == "I":
-                    cadena = cadena.replace(c,vocales[i+1].upper())
-            if c == "o" or c== "O":
-                i = 3
-                if c == "o":
-                    cadena = cadena.replace(c,vocales[i+1])  
-                elif c == "O":
-                    cadena = cadena.replace(c,vocales[i+1].upper())  
-            if c == "u" or c=="U":
-                i = -1
-                if c == "u":
-                    cadena = cadena.replace(c,vocales[i+1])  
-                elif c == "U":
-                    cadena = cadena.replace(c,vocales[i+1].upper())   
+    for letra in cadena:
+        if letra in vocales:
+            cadenaCambiada = cadenaCambiada + vocales[letra]
+        else:
+            cadenaCambiada = cadenaCambiada + letra
     
-    return cadena                  
+    return cadenaCambiada                  
 
 def detectarPalindromos(cadena):
     """Compara una cadena, con la misma cadena pero dada vuelta para comprobar sies un palindromo."""
